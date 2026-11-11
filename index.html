@@ -36,8 +36,8 @@
 
 		<h3>You might have some immediate questions:</h3>
 		<details>
-			<summary>How could the hash not tell you anything about the data if it is a mathematical function? Why can't you just reverse it?</summary>
-			<p>Data is destroyed.</p>
+			<summary>How could the hash not tell you anything about the data if it is a deterministic mathematical function? Why can't you just reverse it?</summary>
+			<p>Information is destroyed. More specifically, all information about what and where letters are is destroyed in a perfectly even and entropic way.</p>
 		</details>
 		<details>
 			<summary>How could we assign a unique name to every sentence if there are a finite number of fixed-length strings but an infinite number of potential sentences?</summary>
@@ -51,6 +51,24 @@
 			<summary>The hashes are longer than the text itself...</summary>
 			<p>Just like hashing isn't limited to text, it also isn't limited by length. The entirety of Harry Potter currently maps to x. It is the only piece of text we will ever find to map to that hash, for the forseeable future.</p>
 		</details>
+
+		<h2>Why is this useful?</h2>
+
+		<p>Useful for these things, blah blah blah, here's what you SHOULDN'T use it for and why -> lead into next section</p>
+
+		<h2>Hash Length Extension Weakness</h2>
+
+		<p>Suppose I want to send a message to a friend. I want friend to know that message wasn't tampered with, so I hash message and send that too. Once friend recieves message, they can check that the hash matches. Wait! What if someone intercepts the message? Then they can just make a completely new message, hash that, and send it to my friend! Therefore I will add a shared secret key to the front of my message before hashing it. My friend can do the same before hashing it on their side. Now the only way to tamper with the message and have it come out to the right hash is to know the secret key!</p>
+
+		<h3>The dan mergle thingy construction</h3>
+
+		<h3>Padding</h3>
+		
+		<h3>Automatically added padding and intentionally added padding are same!</h3>
+		
+		<h3>Continuing the state as if we had intentionally added padding</h3>
+
+		<h2>Remediations</h2>
 
 		<script src="index.js"></script>
 	</body>
