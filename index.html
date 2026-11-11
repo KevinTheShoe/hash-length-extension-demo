@@ -61,11 +61,23 @@
 
 			<p>My name is Alice. I want to send a message to Bob. For once, I don't care if others can see the message, but I do want my friend to be sure that the message came from me and wasn't tampered with. Rumors are that there's this crazy person (Eve) going around messing with peoples' messages.</p>
 			
+			<img src="images/1.svg">
+
 			<p>Therefore, I devise a system. Bob and I have always shared a secret passphrase that we are certain nobody else knows. I will combine our secret passphrase with a copy of my message and hash that.</p>
 			
+			<img src="images/2.svg">
+
+			<p>I send my message along with the calculated hash.</p>
+			
+			<img src="images/3.svg">
+			
 			<p>When Bob recieves my message, he can also combine our secret passphrase with the recieved message and hash it in the same way. If the hashes match, he can rest assured knowing the hash could only have come from that specific combination of our secret passphrase and the message.</p>
+			
+			<img src="images/4.svg">
 
 			<p>Even if Eve intercepts the message, she does not have any way to obtain our secret passphrase without hoping to find it by randomly guessing. If our secret passphrase is long enough, this is infeasible. Therefore, she has no way to generate a matching hash for any edits she might want to make to my message.</p>
+			
+			<img src="images/5.svg">
 
 			<p>Or does she?</p>
 
@@ -78,6 +90,8 @@
 			<h3>Continuing the state as if we had intentionally added padding</h3>
 
 			<h3>Result</h3>
+
+			<h3>Try it yourself</h3>
 
 			<h3>Remediations</h3>
 
