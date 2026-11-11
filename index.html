@@ -12,71 +12,74 @@
 
 		<h2>What is a hash / hash function?</h2>
 
-		<p>
-			Imagine you really, really like this one book. In fact, you like it so much that you decide to give a name to every single sentence in that book.
-			<blockquote>"She looked down." -> Gilbert</blockquote>
-			<blockquote>"He unfolded the parchment and hastily added a postscript." -> Johnson</blockquote>
-			You start naming. Unfortunately, you soon run out of names.<br>
-			What you need in this situation is some kind of naming system that:
-			<ul>
-				<li>Gives a unique, wildly different name for each sentence</li>
-				<li>Gives the same name for the same sentence</li>
-				<li>Gives similar-length names, even for very long/short sentences</li>
-				<li>Gives names that reveal nothing about the original sentence (for privacy)</li>
-			</ul>
-			What you're looking for is a cryptographic hash function.
-		</p>
+			<p>
+				Imagine you really, really like this one book. In fact, you like it so much that you decide to give a name to every single sentence in that book.
+				<blockquote>"She looked down." -> Gilbert</blockquote>
+				<blockquote>"He unfolded the parchment and hastily added a postscript." -> Johnson</blockquote>
+				You start naming. Unfortunately, you soon run out of names.<br>
+				What you need in this situation is some kind of naming system that:
+				<ul>
+					<li>Gives a unique, wildly different name for each sentence</li>
+					<li>Gives the same name for the same sentence</li>
+					<li>Gives similar-length names, even for very long/short sentences</li>
+					<li>Gives names that reveal nothing about the original sentence (for privacy)</li>
+				</ul>
+				What you're looking for is a cryptographic hash function.
+			</p>
 
-		<p>
-			A hash function takes data (in this case, a sentence) and outputs a hash (a name) essentially unique to that data. One such cryptographic hash function is SHA-256, which outputs 64-character hexidecimal names:
-			<blockquote>"She looked down." -> 0563916b9cd91eaa1cf9916fe5b75c4595c170d341a975654dfac59b44ab568d</blockquote>
-			<blockquote>"He unfolded the parchment and hastily added a postscript." -> e56e2b287d08c2e274df79c58f1e0b66c1131de0ed2dfdc24144ce72829e2f19</blockquote>
-			Using SHA-256, we could assign a unique name to every single piece of text ever written. The names don't roll off the tongue quite as easily, but that's a sacrifice we'll have to accept.
-		</p>
+			<p>
+				A hash function takes data (in this case, a sentence) and outputs a hash (a name) essentially unique to that data. One such cryptographic hash function is SHA-256, which outputs 64-character hexidecimal names:
+				<blockquote>"She looked down." -> 0563916b9cd91eaa1cf9916fe5b75c4595c170d341a975654dfac59b44ab568d</blockquote>
+				<blockquote>"He unfolded the parchment and hastily added a postscript." -> e56e2b287d08c2e274df79c58f1e0b66c1131de0ed2dfdc24144ce72829e2f19</blockquote>
+				Using SHA-256, we could assign a unique name to every single piece of text ever written. The names don't roll off the tongue quite as easily, but that's a sacrifice we'll have to accept.
+			</p>
 
-		<h3>You might have some immediate questions:</h3>
-		<details>
-			<summary>How could the hash not tell you anything about the data if it is a deterministic mathematical function? Why can't you just reverse it?</summary>
-			<p>Information is destroyed. More specifically, all information about what and where letters are is destroyed in a perfectly even and entropic way.</p>
-		</details>
-		<details>
-			<summary>How could we assign a unique name to every sentence if there are a finite number of fixed-length strings but an infinite number of potential sentences?</summary>
-			<p>Like fingerprints or snowflakes, it is in theory possible for two hashes to be exactly the same. However, no two pieces of data mapping to the same hash have ever been found for the SHA-256 algorithm, and it is currently considered computationally infeasible to find even one pair.</p>
-		</details>
-		<details>
-			<summary>Is it limited to text?</summary>
-			<p>No.</p>
-		</details>
-		<details>
-			<summary>The hashes are longer than the text itself...</summary>
-			<p>Just like hashing isn't limited to text, it also isn't limited by length. The entirety of Harry Potter currently maps to x. It is the only piece of text we will ever find to map to that hash, for the forseeable future.</p>
-		</details>
+			<h3>You might have some immediate questions:</h3>
 
-		<h2>Why is this useful?</h2>
+				<details>
+					<summary>How could the hash not tell you anything about the data if it is a deterministic mathematical function? Why can't you just reverse it?</summary>
+					<p>Information is destroyed. More specifically, all information about what and where letters are is destroyed in a perfectly even and entropic way.</p>
+				</details>
+				<details>
+					<summary>How could we assign a unique name to every sentence if there are a finite number of fixed-length strings but an infinite number of potential sentences?</summary>
+					<p>Like fingerprints or snowflakes, it is in theory possible for two hashes to be exactly the same. However, no two pieces of data mapping to the same hash have ever been found for the SHA-256 algorithm, and it is currently considered computationally infeasible to find even one pair.</p>
+				</details>
+				<details>
+					<summary>Is it limited to text?</summary>
+					<p>No.</p>
+				</details>
+				<details>
+					<summary>The hashes are longer than the text itself...</summary>
+					<p>Just like hashing isn't limited to text, it also isn't limited by length. The entirety of Harry Potter currently maps to x. It is the only piece of text we will ever find to map to that hash, for the forseeable future.</p>
+				</details>
 
-		<p>Useful for these things, blah blah blah, here's what you SHOULDN'T use it for and why -> lead into next section</p>
+			<h3>Why is this useful?</h3>
+
+				<p>Useful for these things, blah blah blah, here's what you SHOULDN'T use it for and why -> lead into next section</p>
 
 		<h2>Hash Length Extension Weakness</h2>
 
-		<p>My name is Alice. I want to send a message to Bob. For once, I don't care if others can see the message, but I do want my friend to be sure that the message came from me and wasn't tampered with. Rumors are that there's this crazy person (Eve) going around messing with peoples' messages.</p>
-		
-		<p>Therefore, I devise a system. Bob and I have always shared a secret passphrase that we are certain nobody else knows. I will combine our secret passphrase with a copy of my message and hash that.</p>
-		
-		<p>When Bob recieves my message, he can also combine our secret passphrase with the recieved message and hash it in the same way. If the hashes match, he can rest assured knowing the hash could only have come from that specific combination of our secret passphrase and the message.</p>
+			<p>My name is Alice. I want to send a message to Bob. For once, I don't care if others can see the message, but I do want my friend to be sure that the message came from me and wasn't tampered with. Rumors are that there's this crazy person (Eve) going around messing with peoples' messages.</p>
+			
+			<p>Therefore, I devise a system. Bob and I have always shared a secret passphrase that we are certain nobody else knows. I will combine our secret passphrase with a copy of my message and hash that.</p>
+			
+			<p>When Bob recieves my message, he can also combine our secret passphrase with the recieved message and hash it in the same way. If the hashes match, he can rest assured knowing the hash could only have come from that specific combination of our secret passphrase and the message.</p>
 
-		<p>Even if Eve intercepts the message, she does not have any way to obtain our secret passphrase without hoping to find it by randomly guessing. If our secret passphrase is long enough, this is infeasible. Therefore, she has no way to generate a matching hash for any edits she might want to make to my message.</p>
+			<p>Even if Eve intercepts the message, she does not have any way to obtain our secret passphrase without hoping to find it by randomly guessing. If our secret passphrase is long enough, this is infeasible. Therefore, she has no way to generate a matching hash for any edits she might want to make to my message.</p>
 
-		<p>Or does she?</p>
+			<p>Or does she?</p>
 
-		<h3>The dan mergle thingy construction</h3>
+			<h3>The dan mergle thingy construction</h3>
 
-		<h3>Padding</h3>
-		
-		<h3>Automatically added padding and intentionally added padding are same!</h3>
-		
-		<h3>Continuing the state as if we had intentionally added padding</h3>
+			<h3>Padding</h3>
+			
+			<h3>Automatically added padding and intentionally added padding are same!</h3>
+			
+			<h3>Continuing the state as if we had intentionally added padding</h3>
 
-		<h2>Remediations</h2>
+			<h3>Result</h3>
+
+			<h3>Remediations</h3>
 
 		<script src="index.js"></script>
 	</body>
