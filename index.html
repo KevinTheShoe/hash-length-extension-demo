@@ -58,7 +58,15 @@
 
 		<h2>Hash Length Extension Weakness</h2>
 
-		<p>Suppose I want to send a message to a friend. I want friend to know that message wasn't tampered with, so I hash message and send that too. Once friend recieves message, they can check that the hash matches. Wait! What if someone intercepts the message? Then they can just make a completely new message, hash that, and send it to my friend! Therefore I will add a shared secret key to the front of my message before hashing it. My friend can do the same before hashing it on their side. Now the only way to tamper with the message and have it come out to the right hash is to know the secret key!</p>
+		<p>My name is Alice. I want to send a message to Bob. For once, I don't care if others can see the message, but I do want my friend to be sure that the message came from me and wasn't tampered with. Rumors are that there's this crazy person (Eve) going around messing with peoples' messages.</p>
+		
+		<p>Therefore, I devise a system. Bob and I have always shared a secret passphrase that we are certain nobody else knows. I will combine our secret passphrase with a copy of my message and hash that.</p>
+		
+		<p>When Bob recieves my message, he can also combine our secret passphrase with the recieved message and hash it in the same way. If the hashes match, he can rest assured knowing the hash could only have come from that specific combination of our secret passphrase and the message.</p>
+
+		<p>Even if Eve intercepts the message, she does not have any way to obtain our secret passphrase without hoping to find it by randomly guessing. If our secret passphrase is long enough, this is infeasible. Therefore, she has no way to generate a matching hash for any edits she might want to make to my message.</p>
+
+		<p>Or does she?</p>
 
 		<h3>The dan mergle thingy construction</h3>
 
