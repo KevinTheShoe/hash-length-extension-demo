@@ -12,22 +12,46 @@
 
 		<h2>What is a hash / hash function?</h2>
 
-		<p>Imagine you really, really like your diary. In fact, you like it so much that you decide to give a name to every single sentence in your diary.</p>
-		<p>"I looked down the list they had made in the library." -> Gilbert</p>
-		<p>"We unfolded the parchment and hastily added a postscript." -> Johnson</p>
-		<p>You start naming. Unfortunately, you soon run out of names.</p>
-		<p>What you want in this situation is some kind of naming system that:</p>
-		<ul>
-			<li>Gives a unique, wildly different name for each sentence</li>
-			<li>Gives the same name for the same sentence</li>
-			<li>Gives short and succinct names, even for long sentences</li>
-			<li>Gives names that reveal nothing about the original sentence (privacy!)</li>
-		</ul>
-		<p>What you're looking for is a hash function.</p>
-		<p>A hash function takes data (in this case, a sentence) and outputs a hash (a name) essentially unique to that data.</p>
+		<p>
+			Imagine you really, really like this one book. In fact, you like it so much that you decide to give a name to every single sentence in that book.
+			<blockquote>"She looked down." -> Gilbert</blockquote>
+			<blockquote>"He unfolded the parchment and hastily added a postscript." -> Johnson</blockquote>
+			You start naming. Unfortunately, you soon run out of names.<br>
+			What you need in this situation is some kind of naming system that:
+			<ul>
+				<li>Gives a unique, wildly different name for each sentence</li>
+				<li>Gives the same name for the same sentence</li>
+				<li>Gives similar-length names, even for very long/short sentences</li>
+				<li>Gives names that reveal nothing about the original sentence (for privacy)</li>
+			</ul>
+			What you're looking for is a cryptographic hash function.
+		</p>
 
+		<p>
+			A hash function takes data (in this case, a sentence) and outputs a hash (a name) essentially unique to that data. One such cryptographic hash function is SHA-256, which outputs 64-character hexidecimal names:
+			<blockquote>"She looked down." -> 0563916b9cd91eaa1cf9916fe5b75c4595c170d341a975654dfac59b44ab568d</blockquote>
+			<blockquote>"He unfolded the parchment and hastily added a postscript." -> e56e2b287d08c2e274df79c58f1e0b66c1131de0ed2dfdc24144ce72829e2f19</blockquote>
+			Using SHA-256, we could assign a unique name to every single piece of text ever written. The names don't roll off the tongue quite as easily, but that's a sacrifice we'll have to accept.
+		</p>
 
-		<p>The motivation behind all hash functions is that we want to take some data and generate a "fingerprint" unique to that data. Like fingerprints or snowflakes, it is in theory possible for two hashes to be exactly the same. However, no two pieces of data mapping to the same hash have ever been found for the sha256 algorithm, and it is currently considered computationally infeasible to find even one pair.</p>
+		<h3>You might have some immediate questions:</h3>
+		<details>
+			<summary>How could the hash not tell you anything about the data if it is a mathematical function? Why can't you just reverse it?</summary>
+			<p>Data is destroyed.</p>
+		</details>
+		<details>
+			<summary>How could we assign a unique name to every sentence if there are a finite number of fixed-length strings but an infinite number of potential sentences?</summary>
+			<p>Like fingerprints or snowflakes, it is in theory possible for two hashes to be exactly the same. However, no two pieces of data mapping to the same hash have ever been found for the SHA-256 algorithm, and it is currently considered computationally infeasible to find even one pair.</p>
+		</details>
+		<details>
+			<summary>Is it limited to text?</summary>
+			<p>No.</p>
+		</details>
+		<details>
+			<summary>The hashes are longer than the text itself...</summary>
+			<p>Just like hashing isn't limited to text, it also isn't limited by length. The entirety of Harry Potter currently maps to x. It is the only piece of text we will ever find to map to that hash, for the forseeable future.</p>
+		</details>
+
 		<script src="index.js"></script>
 	</body>
 </html>
