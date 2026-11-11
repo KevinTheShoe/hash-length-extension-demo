@@ -1,48 +1,48 @@
 <mxfile host="app.diagrams.net" pages="5">
   <diagram name="Page-1" id="8669ZTsf1sZzB9_zzAje">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="800" pageHeight="120" math="0" shadow="0">
+    <mxGraphModel dx="1178" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="120" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="tFben6rb2LfKc1WGdr0B-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#006600;" value="Alice" vertex="1">
+        <mxCell id="tFben6rb2LfKc1WGdr0B-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#006600;" value="Alice" vertex="1">
           <mxGeometry height="40" width="80" x="120" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="tFben6rb2LfKc1WGdr0B-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#003366;" value="&lt;div&gt;Bob&lt;/div&gt;" vertex="1">
+        <mxCell id="tFben6rb2LfKc1WGdr0B-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#003366;" value="&lt;div&gt;Bob&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="80" x="600" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="tFben6rb2LfKc1WGdr0B-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#660000;" value="Eve" vertex="1">
+        <mxCell id="tFben6rb2LfKc1WGdr0B-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#660000;" value="Eve" vertex="1">
           <mxGeometry height="40" width="80" x="360" as="geometry" />
         </mxCell>
-        <mxCell id="tFben6rb2LfKc1WGdr0B-4" parent="1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;rounded=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;size=20;position=0.38;position2=0.5;base=20;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333300;" value="I want 3 hamsters." vertex="1">
+        <mxCell id="tFben6rb2LfKc1WGdr0B-4" parent="1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;rounded=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=16;size=20;position=0.38;position2=0.5;base=20;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333300;" value="I want 3 hamsters." vertex="1">
           <mxGeometry height="60" width="80" x="120" as="geometry" />
         </mxCell>
-        <mxCell id="tFben6rb2LfKc1WGdr0B-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;labelBorderColor=none;labelBackgroundColor=none;fillColor=#CCFFFF;strokeColor=#006666;fontColor=#006666;" value="Secret" vertex="1">
+        <mxCell id="tFben6rb2LfKc1WGdr0B-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;fillColor=#CCFFFF;strokeColor=#006666;fontColor=#006666;" value="Secret" vertex="1">
           <mxGeometry height="20" width="60" x="40" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="tFben6rb2LfKc1WGdr0B-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;labelBorderColor=none;labelBackgroundColor=none;fillColor=#CCFFFF;strokeColor=#006666;fontColor=#006666;" value="Secret" vertex="1">
+        <mxCell id="tFben6rb2LfKc1WGdr0B-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;fillColor=#CCFFFF;strokeColor=#006666;fontColor=#006666;" value="Secret" vertex="1">
           <mxGeometry height="20" width="60" x="700" y="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="Page-2" id="KMIZ67ePRnUUKoUsMSgB">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="800" pageHeight="120" math="0" shadow="0">
+    <mxGraphModel dx="1414" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="120" math="0" shadow="0">
       <root>
         <mxCell id="ZDzK_nOX1d2pnNLITG58-0" />
         <mxCell id="ZDzK_nOX1d2pnNLITG58-1" parent="ZDzK_nOX1d2pnNLITG58-0" />
-        <mxCell id="ZDzK_nOX1d2pnNLITG58-2" parent="ZDzK_nOX1d2pnNLITG58-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#006600;" value="Alice" vertex="1">
+        <mxCell id="ZDzK_nOX1d2pnNLITG58-2" parent="ZDzK_nOX1d2pnNLITG58-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#006600;" value="Alice" vertex="1">
           <mxGeometry height="40" width="80" x="120" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="ZDzK_nOX1d2pnNLITG58-3" parent="ZDzK_nOX1d2pnNLITG58-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#003366;" value="&lt;div&gt;Bob&lt;/div&gt;" vertex="1">
+        <mxCell id="ZDzK_nOX1d2pnNLITG58-3" parent="ZDzK_nOX1d2pnNLITG58-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#003366;" value="&lt;div&gt;Bob&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="80" x="600" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="ZDzK_nOX1d2pnNLITG58-4" parent="ZDzK_nOX1d2pnNLITG58-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#660000;" value="Eve" vertex="1">
+        <mxCell id="ZDzK_nOX1d2pnNLITG58-4" parent="ZDzK_nOX1d2pnNLITG58-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#660000;" value="Eve" vertex="1">
           <mxGeometry height="40" width="80" x="360" as="geometry" />
         </mxCell>
-        <mxCell id="ZDzK_nOX1d2pnNLITG58-5" parent="ZDzK_nOX1d2pnNLITG58-1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;rounded=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;size=20;position=0.38;position2=0.5;base=20;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333300;" value="I want 3 hamsters." vertex="1">
+        <mxCell id="ZDzK_nOX1d2pnNLITG58-5" parent="ZDzK_nOX1d2pnNLITG58-1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;rounded=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=16;size=20;position=0.38;position2=0.5;base=20;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333300;" value="I want 3 hamsters." vertex="1">
           <mxGeometry height="60" width="80" x="120" as="geometry" />
         </mxCell>
-        <mxCell id="ZDzK_nOX1d2pnNLITG58-7" parent="ZDzK_nOX1d2pnNLITG58-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;labelBorderColor=none;labelBackgroundColor=none;fillColor=#CCFFFF;strokeColor=#006666;fontColor=#006666;" value="Secret" vertex="1">
+        <mxCell id="ZDzK_nOX1d2pnNLITG58-7" parent="ZDzK_nOX1d2pnNLITG58-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;fillColor=#CCFFFF;strokeColor=#006666;fontColor=#006666;" value="Secret" vertex="1">
           <mxGeometry height="20" width="60" x="700" y="100" as="geometry" />
         </mxCell>
         <mxCell id="ZDzK_nOX1d2pnNLITG58-8" parent="ZDzK_nOX1d2pnNLITG58-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#330066;" value="&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Hash(&quot;&lt;span style=&quot;color: rgb(0, 102, 102);&quot;&gt;Secret&lt;/span&gt; | &lt;span style=&quot;color: rgb(51, 51, 0);&quot;&gt;I want 3 hamsters.&lt;/span&gt;&quot;) =&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;34fdb0395ddc5ba2&lt;br&gt;545c2e1172533250&lt;br&gt;c4938330e2654b45&lt;br&gt;e053a8500c8d7dd3&lt;/font&gt;&lt;/div&gt;" vertex="1">
@@ -52,7 +52,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Page-3" id="4PM_9HYzjce_qNX49TVu">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="800" pageHeight="120" math="0" shadow="0">
+    <mxGraphModel dx="1414" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="120" math="0" shadow="0">
       <root>
         <mxCell id="0di0a4rYDdy1fwHdW2WT-0" />
         <mxCell id="0di0a4rYDdy1fwHdW2WT-1" parent="0di0a4rYDdy1fwHdW2WT-0" />
@@ -62,22 +62,22 @@
             <mxPoint x="590" y="100" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0di0a4rYDdy1fwHdW2WT-2" parent="0di0a4rYDdy1fwHdW2WT-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#006600;" value="Alice" vertex="1">
+        <mxCell id="0di0a4rYDdy1fwHdW2WT-2" parent="0di0a4rYDdy1fwHdW2WT-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#006600;" value="Alice" vertex="1">
           <mxGeometry height="40" width="80" x="120" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="0di0a4rYDdy1fwHdW2WT-3" parent="0di0a4rYDdy1fwHdW2WT-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#003366;" value="&lt;div&gt;Bob&lt;/div&gt;" vertex="1">
+        <mxCell id="0di0a4rYDdy1fwHdW2WT-3" parent="0di0a4rYDdy1fwHdW2WT-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#003366;" value="&lt;div&gt;Bob&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="80" x="600" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="0di0a4rYDdy1fwHdW2WT-4" parent="0di0a4rYDdy1fwHdW2WT-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#660000;" value="Eve" vertex="1">
+        <mxCell id="0di0a4rYDdy1fwHdW2WT-4" parent="0di0a4rYDdy1fwHdW2WT-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#660000;" value="Eve" vertex="1">
           <mxGeometry height="40" width="80" x="360" as="geometry" />
         </mxCell>
-        <mxCell id="0di0a4rYDdy1fwHdW2WT-6" parent="0di0a4rYDdy1fwHdW2WT-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;labelBorderColor=none;labelBackgroundColor=none;fillColor=#CCFFFF;strokeColor=#006666;fontColor=#006666;" value="Secret" vertex="1">
+        <mxCell id="0di0a4rYDdy1fwHdW2WT-6" parent="0di0a4rYDdy1fwHdW2WT-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=16;labelBorderColor=none;labelBackgroundColor=none;fillColor=#CCFFFF;strokeColor=#006666;fontColor=#006666;" value="Secret" vertex="1">
           <mxGeometry height="20" width="60" x="700" y="100" as="geometry" />
         </mxCell>
         <mxCell id="0di0a4rYDdy1fwHdW2WT-7" parent="0di0a4rYDdy1fwHdW2WT-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#330066;" value="&lt;div&gt;&lt;font size=&quot;1&quot;&gt;34fdb0395ddc5ba2&lt;br&gt;545c2e1172533250&lt;br&gt;c4938330e2654b45&lt;br&gt;e053a8500c8d7dd3&lt;/font&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="70" width="100" x="400" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="UdQN30QszcPa3rHTEm6p-0" parent="0di0a4rYDdy1fwHdW2WT-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333300;" value="I want 3 hamsters." vertex="1">
+        <mxCell id="UdQN30QszcPa3rHTEm6p-0" parent="0di0a4rYDdy1fwHdW2WT-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333300;" value="I want 3 hamsters." vertex="1">
           <mxGeometry height="40" width="80" x="320" y="80" as="geometry" />
         </mxCell>
       </root>
@@ -88,19 +88,19 @@
       <root>
         <mxCell id="02xTigd0QIKzDZkaBq-1-0" />
         <mxCell id="02xTigd0QIKzDZkaBq-1-1" parent="02xTigd0QIKzDZkaBq-1-0" />
-        <mxCell id="02xTigd0QIKzDZkaBq-1-2" parent="02xTigd0QIKzDZkaBq-1-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#006600;" value="Alice" vertex="1">
+        <mxCell id="02xTigd0QIKzDZkaBq-1-2" parent="02xTigd0QIKzDZkaBq-1-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#006600;" value="Alice" vertex="1">
           <mxGeometry height="40" width="80" x="120" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="02xTigd0QIKzDZkaBq-1-3" parent="02xTigd0QIKzDZkaBq-1-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#003366;" value="&lt;div&gt;Bob&lt;/div&gt;" vertex="1">
+        <mxCell id="02xTigd0QIKzDZkaBq-1-3" parent="02xTigd0QIKzDZkaBq-1-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#003366;" value="&lt;div&gt;Bob&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="80" x="600" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="02xTigd0QIKzDZkaBq-1-4" parent="02xTigd0QIKzDZkaBq-1-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#660000;" value="Eve" vertex="1">
+        <mxCell id="02xTigd0QIKzDZkaBq-1-4" parent="02xTigd0QIKzDZkaBq-1-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#660000;" value="Eve" vertex="1">
           <mxGeometry height="40" width="80" x="360" as="geometry" />
         </mxCell>
         <mxCell id="02xTigd0QIKzDZkaBq-1-6" parent="02xTigd0QIKzDZkaBq-1-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#330066;" value="&lt;div&gt;&lt;font size=&quot;1&quot;&gt;34fdb0395ddc5ba2&lt;br&gt;545c2e1172533250&lt;br&gt;c4938330e2654b45&lt;br&gt;e053a8500c8d7dd3&lt;/font&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="70" width="100" x="480" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="02xTigd0QIKzDZkaBq-1-7" parent="02xTigd0QIKzDZkaBq-1-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333300;" value="I want 3 hamsters." vertex="1">
+        <mxCell id="02xTigd0QIKzDZkaBq-1-7" parent="02xTigd0QIKzDZkaBq-1-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333300;" value="I want 3 hamsters." vertex="1">
           <mxGeometry height="40" width="80" x="500" as="geometry" />
         </mxCell>
         <mxCell id="xXYhpEMP5mv9a4pzPYnH-0" parent="02xTigd0QIKzDZkaBq-1-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#330066;" value="&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Hash(&quot;&lt;span style=&quot;color: rgb(0, 102, 102);&quot;&gt;Secret&lt;/span&gt; | &lt;span style=&quot;color: rgb(51, 51, 0);&quot;&gt;I want 3 hamsters.&lt;/span&gt;&quot;) =&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;34fdb0395ddc5ba2&lt;br&gt;545c2e1172533250&lt;br&gt;c4938330e2654b45&lt;br&gt;e053a8500c8d7dd3&lt;/font&gt;&lt;/div&gt;" vertex="1">
@@ -126,16 +126,16 @@
       <root>
         <mxCell id="2ADsUQgWuh5D7FPOfYki-0" />
         <mxCell id="2ADsUQgWuh5D7FPOfYki-1" parent="2ADsUQgWuh5D7FPOfYki-0" />
-        <mxCell id="2ADsUQgWuh5D7FPOfYki-2" parent="2ADsUQgWuh5D7FPOfYki-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#006600;" value="Alice" vertex="1">
+        <mxCell id="2ADsUQgWuh5D7FPOfYki-2" parent="2ADsUQgWuh5D7FPOfYki-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#006600;" value="Alice" vertex="1">
           <mxGeometry height="40" width="80" x="120" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="2ADsUQgWuh5D7FPOfYki-3" parent="2ADsUQgWuh5D7FPOfYki-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#003366;" value="&lt;div&gt;Bob&lt;/div&gt;" vertex="1">
+        <mxCell id="2ADsUQgWuh5D7FPOfYki-3" parent="2ADsUQgWuh5D7FPOfYki-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#003366;" value="&lt;div&gt;Bob&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="80" x="600" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="2ADsUQgWuh5D7FPOfYki-4" parent="2ADsUQgWuh5D7FPOfYki-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#660000;" value="Eve" vertex="1">
+        <mxCell id="2ADsUQgWuh5D7FPOfYki-4" parent="2ADsUQgWuh5D7FPOfYki-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=18;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#660000;" value="Eve" vertex="1">
           <mxGeometry height="40" width="80" x="360" as="geometry" />
         </mxCell>
-        <mxCell id="2ADsUQgWuh5D7FPOfYki-6" parent="2ADsUQgWuh5D7FPOfYki-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#663300;" value="&lt;div&gt;Tampered message.&lt;/div&gt;" vertex="1">
+        <mxCell id="2ADsUQgWuh5D7FPOfYki-6" parent="2ADsUQgWuh5D7FPOfYki-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=16;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#663300;" value="&lt;div&gt;Tampered message.&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="100" x="300" y="60" as="geometry" />
         </mxCell>
         <mxCell id="2ADsUQgWuh5D7FPOfYki-7" parent="2ADsUQgWuh5D7FPOfYki-1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fontFamily=Carlito;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DCarlito;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#330066;" value="&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Hash(&quot;&lt;span style=&quot;color: rgb(0, 102, 102);&quot;&gt;?&lt;/span&gt; | &lt;span style=&quot;color: rgb(51, 51, 0);&quot;&gt;Tampered message.&lt;/span&gt;&quot;) =&lt;font size=&quot;1&quot;&gt;&amp;nbsp;?&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
