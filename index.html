@@ -8,6 +8,26 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+		<h1>Hash Length Extension Demo</h1>
+
+		<h2>What is a hash / hash function?</h2>
+
+		<p>Imagine you really, really like your diary. In fact, you like it so much that you decide to give a name to every single sentence in your diary.</p>
+		<p>"I looked down the list they had made in the library." -> Gilbert</p>
+		<p>"We unfolded the parchment and hastily added a postscript." -> Johnson</p>
+		<p>You start naming. Unfortunately, you soon run out of names.</p>
+		<p>What you want in this situation is some kind of naming system that:</p>
+		<ul>
+			<li>Gives a unique, wildly different name for each sentence</li>
+			<li>Gives the same name for the same sentence</li>
+			<li>Gives short and succinct names, even for long sentences</li>
+			<li>Gives names that reveal nothing about the original sentence (privacy!)</li>
+		</ul>
+		<p>What you're looking for is a hash function.</p>
+		<p>A hash function takes data (in this case, a sentence) and outputs a hash (a name) essentially unique to that data.</p>
+
+
+		<p>The motivation behind all hash functions is that we want to take some data and generate a "fingerprint" unique to that data. Like fingerprints or snowflakes, it is in theory possible for two hashes to be exactly the same. However, no two pieces of data mapping to the same hash have ever been found for the sha256 algorithm, and it is currently considered computationally infeasible to find even one pair.</p>
 		<script src="index.js"></script>
 	</body>
 </html>
