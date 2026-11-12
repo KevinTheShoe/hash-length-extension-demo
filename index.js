@@ -1,8 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-	for (let e of document.getElementsByClassName('input-blocks')) {
-		e.replaceChildren(...generateBlocks(document.getElementById(e.dataset.input).value));
+	for (let el of document.getElementsByTagName('input')) {
+		el.addEventListener('input', onInputChange);
+		onInputChange({ target: el });
 	}
 });
+
+
+function onInputChange(e) {
+	for (let el of document.getElementsByClassName(e.target.dataset.target)) {
+		el.replaceChildren(...generateBlocks(e.target.value));
+	}
+}
 
 
 function el(tag, cls, id, text) {
