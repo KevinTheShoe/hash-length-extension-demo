@@ -27,16 +27,20 @@ function el(tag, cls, id, text) {
 
 function generateBlockElements(text, padded) {
 	let bytes = sha256.strToBytes(text);
-	if (padded) bytes = sha256.padBytes(bytes);
-	const blocks = sha256.splitBytes(bytes);
+	const blocks = sha256.splitBytes(padded ? sha256.padBytes(bytes) : bytes);
 
 	const blockElements = [];
 
+	let i = 0;
 	for (const block of blocks) {
 		const blockElement = el('div', 'block');
 		for (const byte of block) {
-			if (byte >= 32 && byte <= 126) blockElement.append(el('span', 'byte data', null, String.fromCharCode(byte)));
-			else blockElement.append(el('span', 'byte data hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
+			if (i < bytes.length) {
+				if (byte >= 32 && byte <= 126) blockElement.append(el('span', 'byte data', null, String.fromCharCode(byte)));
+				else blockElement.append(el('span', 'byte data hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
+			}
+			else blockElement.append(el('span', 'byte padding hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
+			i++;
 		}
 		blockElements.push(blockElement);
 	}
