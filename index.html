@@ -89,9 +89,15 @@
 
 			<input data-target="input-1" value="Dumbledore smiled at Harry, but Karkaroff and Madame Maxime didn't look at all pleased to see him.">
 
-			<p>We will split that message into 64-byte blocks. Each letter is one byte, but it's also important to know: there are bytes that aren't letters. We'll denote these non-letter bytes using hexidecimal, like this: <span class='byte hex'>D3</span></p>
+			<p>We will split that message into 64-byte blocks. Each letter is one byte.</p>
 
-			<div class="input-blocks input-1"></div>
+			<div class="input-1 blocks"></div>
+
+			<p>Notice that in the example provided, there are not enough letters in the second block to fill it out fully! This is no good, because SHA-256's internal functions operate only on 64-byte blocks. What we must do in this situation is add "padding" bytes (meaningless junk bytes) in order to fill out the rest of the block. At the very end of the block, we also include 8 bytes that represent how long the original data was.</p>
+
+			<p>Note: these padding and length bytes cannot be represented as letters. We'll denote them using hexidecimal, like this: <span class='byte hex padding'>D3</span></p>
+
+			<div class="input-1 blocks padded"></div>
 
 		<h2>What's wrong?</h2>
 			
@@ -105,6 +111,6 @@
 
 		<h2>Remediations</h2>
 
-		<script src="index.js"></script>
+		<script type="module" src="index.js"></script>
 	</body>
 </html>

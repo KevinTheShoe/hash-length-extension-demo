@@ -26,7 +26,7 @@ img {
 	padding: 40px;
 }
 
-.input-blocks {
+.blocks {
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
@@ -55,14 +55,16 @@ img {
 }
 
 .hex {
-	background-color: #fff1aa;
-	border: 1px solid #805500;
-	color: #805500;
 	font-size: 16px;
 }
 
-.letter {
+.data {
 	background-color: #aaffaa;
 	border: 1px solid #008000;
 	color: #008000;
+}
+.padding {
+	background-color: #fff1aa;
+	border: 1px solid #805500;
+	color: #805500;
 }

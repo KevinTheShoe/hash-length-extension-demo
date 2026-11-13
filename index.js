@@ -1,14 +1,17 @@
+import * as sha256 from './sha256.js';
+
+
 document.addEventListener('DOMContentLoaded', () => {
-	for (let el of document.getElementsByTagName('input')) {
-		el.addEventListener('input', onInputChange);
-		onInputChange({ target: el });
+	for (let e of document.getElementsByTagName('input')) {
+		e.addEventListener('input', onInputChange);
+		onInputChange({ target: e });
 	}
 });
 
 
-function onInputChange(e) {
-	for (let el of document.getElementsByClassName(e.target.dataset.target)) {
-		el.replaceChildren(...generateBlocks(e.target.value));
+function onInputChange(event) {
+	for (let e of document.getElementsByClassName(event.target.dataset.target)) {
+		e.replaceChildren(...generateBlockElements(event.target.value, e.classList.contains('padded')));
 	}
 }
 
@@ -22,16 +25,21 @@ function el(tag, cls, id, text) {
 }
 
 
-function generateBlocks(data, blockSize = 64) {
-	if (typeof data === 'string') data = new TextEncoder().encode(data); // turn to bytearray if string
-	const blocks = [];
-	for (let i = 0; i < data.length; i += blockSize) {
-		const block = el('div', 'block');
-		for (const byte of data.subarray(i, i + blockSize)) {
-			if (byte >= 32 && byte <= 126) block.append(el('span', 'byte letter', null, String.fromCharCode(byte)));
-			else block.append(el('span', 'byte hex', null, byte.toString(16).padStart(2, '0')));
+function generateBlockElements(text, padded) {
+	let bytes = sha256.strToBytes(text);
+	if (padded) bytes = sha256.padBytes(bytes);
+	const blocks = sha256.splitBytes(bytes);
+
+	const blockElements = [];
+
+	for (const block of blocks) {
+		const blockElement = el('div', 'block');
+		for (const byte of block) {
+			if (byte >= 32 && byte <= 126) blockElement.append(el('span', 'byte data', null, String.fromCharCode(byte)));
+			else blockElement.append(el('span', 'byte data hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
 		}
-		blocks.push(block);
+		blockElements.push(blockElement);
 	}
-	return blocks;
+
+	return blockElements;
 }
