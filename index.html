@@ -105,11 +105,21 @@
 
 			<div class="input-1 blocks padded"></div>
 
+			<p>Now that our blocks are nice and square, we're ready to feed them to the real belly of the beast: SHA-256's compression function. This is what does most of the work destroying information about the data and turning what we have into a nice hash. We won't get too deep into the weeds about how it actually works: just think of it as a function that takes a 32-byte "state" along with a 64-byte block of data, and outputs another state.</p>
+			
+			<p>That output state is then fed back into the compression function along with a new block of data, and this process repeats until all blocks have been consumed.</p>
+			
+			<p>What about the first function in the chain? Who will feed it the state it needs? Worry not, as it recieves a special, universal default state called the "initialization vector" (IV).</p>
+
+			<p>And that's it! We run down the chain, and the final compression function's output state is simply our final hash!</p>
+
 		<h2>What's wrong?</h2>
 			
 			<h3>Automatically added padding and intentionally added padding are same!</h3>
 			
 			<h3>Continuing the state as if we had intentionally added padding</h3>
+
+			<p>If the final hash is just the final state in the chain, can't we just... continue where we left off?</p>
 
 			<h3>Result</h3>
 
