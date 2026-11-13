@@ -111,15 +111,15 @@
 			
 			<p>What about the first function in the chain? Who will feed it the state it needs? Worry not, as it recieves a special, universal default state called the "initialization vector" (IV).</p>
 
-			<p>And that's it! We run down the chain, and the final compression function's output state is simply our final hash!</p>
+			<p>And that's it! We run down the chain, and the final compression function's output state is simply our final SHA-256 hash!</p>
 
 		<h2>What's wrong?</h2>
-			
-			<h3>Automatically added padding and intentionally added padding are same!</h3>
-			
-			<h3>Continuing the state as if we had intentionally added padding</h3>
 
-			<p>If the final hash is just the final state in the chain, can't we just... continue where we left off?</p>
+			<p>Wait a minute. If the final hash is just the final state in the chain, can't we just... continue where we left off?</p>
+
+			<p>As it turns out, we can! If we simply pretend that the message padding and length bytes were part of the data, we can take the final hash and keep running it through the hash function with new data!</p>
+			
+			<p>Our new blocks will have to be padded as usual, including with correct length bytes, which might trip us up if we don't know the length of the original message. However, in most situations, it isn't very hard or infeasible to guess.</p>
 
 			<h3>Result</h3>
 
