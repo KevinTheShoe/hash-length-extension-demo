@@ -2,7 +2,7 @@ import * as sha256 from './sha256.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-	for (let e of document.getElementsByTagName('input')) {
+	for (let e of document.getElementsByTagName('textarea')) {
 		e.addEventListener('input', onInputChange);
 		onInputChange({ target: e });
 	}

@@ -26,6 +26,16 @@ img {
 	padding: 40px;
 }
 
+textarea {
+	font-family: monospace;
+	font-size: 18px;
+	width: 90%;
+	margin: 40px auto;
+	padding: 10px;
+	display: block;
+}
+
+
 .blocks {
 	display: flex;
 	flex-direction: column;
@@ -40,6 +50,7 @@ img {
 	grid-auto-rows: max-content; 
 	gap: 4px;
 }
+
 
 .byte {
 	font-family: monospace;
@@ -63,6 +74,7 @@ img {
 	border: 1px solid #008000;
 	color: #008000;
 }
+
 .padding {
 	background-color: #fff1aa;
 	border: 1px solid #805500;
