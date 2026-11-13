@@ -55,7 +55,13 @@
 
 			<h3>Why is this useful?</h3>
 
-				<p>Useful for these things, blah blah blah, here's what you SHOULDN'T use it for and why -> lead into next section</p>
+				<p>As it turns out, these hashes are quite useful in a variety of applications.</p>
+
+				<p>A major one is in storing passwords. Instead of keeping a copy of your password on hand at all times, all (good) websites simply keep the corresponding hash. When you log in, they can hash your submitted password and see if the result matches what they have. Assuming you typed in your password correctly, the hashes will match, since hashing the same string always outputs the same unique hash.</p>
+				
+				<p>At the same time, if the website were to get hacked and have all of its stored password hashes stolen, it would be in theory very difficult for the attackers to find your actual password (assuming it was strong enough). This is because a hash reveals nothing about its original text. Therefore, the only way for attackers to find your password is essentially through rapid, educated guessing.</p>
+
+				<p>However, as cool as hash functions are, many commonly-used ones come with an interesting flaw.</p>
 
 		<h2>An example scenario</h2>
 
