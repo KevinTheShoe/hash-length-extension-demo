@@ -41,7 +41,9 @@ function onInputChange(event) {
 				}
 
 				// then block element and compression function image
-				e.append(blockElement, el('img'));
+				const compressionImg = el('img');
+				compressionImg.src = 'images/compression.svg';
+				e.append(blockElement, compressionImg);
 			}
 			
 			// final blank cell and state
