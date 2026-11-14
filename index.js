@@ -18,10 +18,14 @@ function shaDemoUpdate() {
 
 	document.getElementById('sha-demo-full').replaceChildren(...createShaFullDemoEls(blocks, bytes.length));
 
+	document.getElementById('sha-demo-result').textContent = `"${new TextDecoder().decode(bytes)}" => ${sha256.stateToHex(sha256.compressBlock(sha256.joinBytes(blocks)))}`;
+
 	const extendedBytes = sha256.joinBytes(blocks, sha256.strToBytes(shaDemoExtensionInput.value));
 	const extendedBlocks = sha256.splitBytes(sha256.padBytes(extendedBytes));
 
 	document.getElementById('sha-demo-extension').replaceChildren(...createShaFullDemoEls(extendedBlocks, extendedBytes.length));
+
+	document.getElementById('sha-demo-extension-result').textContent = `"${new TextDecoder().decode(extendedBytes)}" => ${sha256.stateToHex(sha256.compressBlock(sha256.joinBytes(extendedBlocks)))}`;
 }
 
 

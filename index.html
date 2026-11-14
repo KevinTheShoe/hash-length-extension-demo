@@ -113,9 +113,13 @@
 			
 			<p>What about the first function in the chain? Who will feed it the state it needs? Worry not: it recieves a special, universal default state called the "initialization vector" (IV).</p>
 
-			<p>And that's it! We run down the chain, and the final compression function's output state is our final SHA-256 hash!</p>
+			<p>And that's it! We run down the chain...</p>
 
 			<div id="sha-demo-full" class="centered two-col"></div>
+
+			<p>The final compression function's output state is our final SHA-256 hash!</p>
+
+			<blockquote id="sha-demo-result" class="centered"></blockquote>
 
 		<h2>What's wrong?</h2>
 
@@ -128,6 +132,8 @@
 			<div id="sha-demo-extension" class="centered two-col"></div>
 
 			<p>Now we have the hash for a new piece of text, one that looks like this:</p>
+
+			<blockquote id="sha-demo-extension-result" class="centered"></blockquote>
 
 			<p>Of course, a side effect of including the original padding + length bytes as part of the data is that there will be a bit of garbage scattered before our extended message. To a human reciever, this might give some indication that something was tampered with. In practice, though, the reciever could be a web server, an electronic service, or otherwise oblivious to the suspicious-looking characters.</p>
 			
