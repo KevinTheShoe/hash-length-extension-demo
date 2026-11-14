@@ -35,7 +35,7 @@ extensionDemoUpdate();
 
 function extensionDemoUpdate() {
 	const bytes = sha256.strToBytes(extensionDemoInput.value);
-	const blocks = sha256.splitBytes(sha256.padBytes(bytes, 145));
+	const blocks = sha256.splitBytes(sha256.padBytes(bytes, 192));
 	document.getElementById('extension-demo').replaceChildren(...createShaFullDemoEls(blocks, bytes.length, sha256.hexToState('f292d76ba39099213d5d0736801f784b0f797a4e7044489b71b8d9f3d78c1342')));
 }
 
