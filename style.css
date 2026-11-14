@@ -20,46 +20,34 @@ blockquote {
 	margin-inline: 0;
 }
 
-img {
-	width: 100%;
-	height: auto;
-	padding: 40px;
-}
-
 textarea {
 	font-family: monospace;
 	font-size: 18px;
-	width: 90%;
-	margin: 40px auto;
-	padding: 10px;
-	display: block;
 }
 
+.centered {
+	display: block;
+	width: 90%;
+	margin: 40px auto;
+	height: auto;
+	text-align: center;
+	place-content: center;
+	place-items: center;
+}
 
 .col {
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
-	padding: 40px;
-	align-items: center;
 }
 
 .two-col {
 	display: grid;
 	grid-template-columns: repeat(2, max-content);
 	grid-auto-rows: max-content;
-	gap: 40px;
-	padding: 40px;
-	align-items: center;
+	gap: 20px;
 }
 
-
-.hash-block {
-	display: grid;
-	grid-template-columns: repeat(8, max-content);
-	grid-auto-rows: max-content;
-	gap: 4px;
-}
 
 .byte {
 	font-family: monospace;
@@ -78,6 +66,7 @@ textarea {
 	font-size: 16px;
 }
 
+
 .hash-data {
 	background-color: #aaffaa;
 	border: 1px solid #008000;
@@ -88,6 +77,13 @@ textarea {
 	background-color: #fff1aa;
 	border: 1px solid #805500;
 	color: #805500;
+}
+
+.hash-block {
+	display: grid;
+	grid-template-columns: repeat(8, max-content);
+	grid-auto-rows: max-content;
+	gap: 4px;
 }
 
 .hash-state {

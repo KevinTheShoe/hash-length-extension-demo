@@ -14,8 +14,8 @@
 
 			<p>
 				Imagine you really, really like this one book. In fact, you like it so much that you decide to give a name to every single sentence in that book.
-				<blockquote>"She looked down." -> Gilbert</blockquote>
-				<blockquote>"He unfolded the parchment and hastily added a postscript." -> Johnson</blockquote>
+				<blockquote class="centered">"She looked down." -> Gilbert</blockquote>
+				<blockquote class="centered">"He unfolded the parchment and hastily added a postscript." -> Johnson</blockquote>
 				You start naming. Unfortunately, you soon run out of names.<br>
 				What you need in this situation is some kind of naming system that:
 				<ul>
@@ -29,8 +29,8 @@
 
 			<p>
 				A hash function takes data (in this case, a sentence) and outputs a hash (a name) essentially unique to that data. One such cryptographic hash function is SHA-256, which outputs 64-character hexidecimal names:
-				<blockquote>"She looked down." -> 0563916b9cd91eaa1cf9916fe5b75c4595c170d341a975654dfac59b44ab568d</blockquote>
-				<blockquote>"He unfolded the parchment and hastily added a postscript." -> e56e2b287d08c2e274df79c58f1e0b66c1131de0ed2dfdc24144ce72829e2f19</blockquote>
+				<blockquote class="centered">"She looked down." -> 0563916b9cd91eaa1cf9916fe5b75c4595c170d341a975654dfac59b44ab568d</blockquote>
+				<blockquote class="centered">"He unfolded the parchment and hastily added a postscript." -> e56e2b287d08c2e274df79c58f1e0b66c1131de0ed2dfdc24144ce72829e2f19</blockquote>
 				Using SHA-256, we could assign a unique name to every single piece of text ever written. The names don't roll off the tongue quite as easily, but that's a sacrifice we'll have to accept.
 			</p>
 
@@ -67,23 +67,23 @@
 
 			<p>My name is Alice. I want to send a message to Bob. For once, I don't care if others can see the message, but I do want my friend to be sure that the message came from me and wasn't tampered with. Rumors are that there's this crazy person (Eve) going around messing with peoples' messages.</p>
 			
-			<img src="images/1.svg">
+			<img class="centered" src="images/1.svg">
 
 			<p>Therefore, I devise a system. Bob and I have always shared a secret passphrase that we are certain nobody else knows. I will combine our secret passphrase with a copy of my message and hash that.</p>
 			
-			<img src="images/2.svg">
+			<img class="centered" src="images/2.svg">
 
 			<p>I send my message along with the calculated hash.</p>
 			
-			<img src="images/3.svg">
+			<img class="centered" src="images/3.svg">
 			
 			<p>When Bob recieves my message, he can also combine our secret passphrase with the recieved message and hash it in the same way. If the hashes match, he can rest assured knowing the hash could only have come from that specific combination of our secret passphrase and the message.</p>
 			
-			<img src="images/4.svg">
+			<img class="centered" src="images/4.svg">
 
 			<p>Even if Eve intercepts the message, she does not have any way to obtain our secret passphrase without hoping to find it by randomly guessing. If our secret passphrase is long enough, this is infeasible. Therefore, she has no way to generate a matching hash for any edits she might want to make to my message.</p>
 			
-			<img src="images/5.svg">
+			<img class="centered" src="images/5.svg">
 
 			<p>Or does she?</p>
 
@@ -93,17 +93,17 @@
 
 			<p>First, let us choose a large message we want to hash.</p>
 
-			<textarea data-target="demo-1">Dumbledore smiled at Harry, but Karkaroff and Madame Maxime didn't look at all pleased to see him.</textarea>
+			<textarea class="centered" data-target="demo-1">Dumbledore smiled at Harry, but Karkaroff and Madame Maxime didn't look at all pleased to see him.</textarea>
 
 			<p>We will split that message into 64-byte blocks. Each letter is one byte.</p>
 
-			<div class="demo-1 demo-split col"></div>
+			<div class="demo-1 demo-split col centered"></div>
 
 			<p>Notice that in the example provided, there are not enough letters in the second block to fill it out fully! This is no good, because SHA-256's internal functions operate only on 64-byte blocks. What we must do in this situation is add "padding" bytes (meaningless junk bytes) in order to fill out the rest of the block. At the very end of the block, we also include 8 bytes that represent how long the original data was.</p>
 
 			<p>Note: these padding and length bytes cannot be represented as letters. We'll denote them using hexidecimal, like this: <span class='byte hex hash-padding'>D3</span></p>
 
-			<div class="demo-1 demo-padded col"></div>
+			<div class="demo-1 demo-padded col centered"></div>
 
 			<p>Now that our blocks are nice and square, we're ready to feed them to the real belly of the beast: SHA-256's compression function. This is what does most of the work destroying information about the data and turning what we have into a nice hash. We won't get too deep into the weeds about how it actually works: just think of it as a function that takes a 32-byte "state" along with a 64-byte block of data, and outputs another state.</p>
 			
@@ -113,7 +113,7 @@
 
 			<p>And that's it! We run down the chain, and the final compression function's output state is our final SHA-256 hash!</p>
 
-			<div class="demo-1 demo-full two-col"></div>
+			<div class="demo-1 demo-full two-col centered"></div>
 
 		<h2>What's wrong?</h2>
 
