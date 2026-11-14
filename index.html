@@ -149,13 +149,19 @@
 
 			<blockquote class="centered">Hash: f292d76ba39099213d5d0736801f784b0f797a4e7044489b71b8d9f3d78c1342</blockquote>
 
-			<p>You know all about Alice and Bob's little secret hashing setup, though sadly you've never been able to actually find the secret. But now you don't need to! You have a hash, and can guess at the length of the secret to create another valid hash for an extended message! For simplicity, let us assume that Eve sends Bob messages repeatedly until she correctly guesses the secret length of 19:</p>
+			<p>You know all about Alice and Bob's little secret hashing setup, though sadly you've never been able to actually find the secret. But now you don't need to! You have a hash, and can guess at the length of the secret to create another valid hash for an extended message! For simplicity, let us assume that you send Bob messages repeatedly until you correctly guess the secret length of 19:</p>
 
 			<textarea id="extension-demo-input" class="centered">P.S. also include a jar of 300 spiders.</textarea>
 
 			<div id="extension-demo" class="centered two-col"></div>
 
-			<blockquote id="extension-demo-result" class="centered"></blockquote>
+			<p>Now you can send a valid message to Bob that looks like this:</p>
+
+			<blockquote id="extension-demo-result-text" class="centered"></blockquote>
+
+			<blockquote id="extension-demo-result-hash" class="centered"></blockquote>
+
+			<p>Bob will recieve this message, prepend the secret, and find it to be a valid hash! Alice shall soon be met with a most nasty surprise.</p>
 
 		<script type="module" src="index.js"></script>
 	</body>
