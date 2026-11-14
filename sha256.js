@@ -27,6 +27,8 @@ export function splitBytes(bytes) {
 	return blocks;
 }
 
+export const joinBytes = (...chunks) => new Uint8Array(chunks.flat().flatMap(b => [...b]));
+
 
 export const DEFAULT_IV = [
 	0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a,

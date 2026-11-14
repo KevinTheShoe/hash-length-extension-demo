@@ -17,6 +17,11 @@ function shaDemoUpdate() {
 	document.getElementById('sha-demo-padded').replaceChildren(...createBlockEls(blocks, bytes.length));
 
 	document.getElementById('sha-demo-full').replaceChildren(...createShaFullDemoEls(blocks, bytes.length));
+
+	const extendedBytes = sha256.joinBytes(blocks, sha256.strToBytes(shaDemoExtensionInput.value));
+	const extendedBlocks = sha256.splitBytes(sha256.padBytes(extendedBytes));
+
+	document.getElementById('sha-demo-extension').replaceChildren(...createShaFullDemoEls(extendedBlocks, extendedBytes.length));
 }
 
 
