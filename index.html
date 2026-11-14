@@ -14,9 +14,9 @@
 
 			<p>Imagine you really, really like this one book. In fact, you like it so much that you decide to give a name to every single sentence in that book.</p>
 
-			<blockquote class="centered">"She looked down." => Gilbert</blockquote>
+			<blockquote class="centered">"She looked down." => <span class="hash-state">Gilbert</span></blockquote>
 
-			<blockquote class="centered">"He unfolded the parchment and hastily added a postscript." => Johnson</blockquote>
+			<blockquote class="centered">"He unfolded the parchment and hastily added a postscript." => <span class="hash-state">Johnson</span></blockquote>
 
 			<p>You start naming. Unfortunately, you soon run out of names.</p>
 			
@@ -33,9 +33,9 @@
 
 			<p>A hash function takes data (in this case, a sentence) and outputs a hash (a name) essentially unique to that data. One such cryptographic hash function is SHA-256, which outputs 64-character hexidecimal names:</p>
 		
-			<blockquote class="centered">"She looked down." => 0563916b9cd91eaa1cf9916fe5b75c4595c170d341a975654dfac59b44ab568d</blockquote>
+			<blockquote class="centered">"She looked down." => <span class="hash-state">0563916b9cd91eaa1cf9916fe5b75c4595c170d341a975654dfac59b44ab568d</span></blockquote>
 
-			<blockquote class="centered">"He unfolded the parchment and hastily added a postscript." => e56e2b287d08c2e274df79c58f1e0b66c1131de0ed2dfdc24144ce72829e2f19</blockquote>
+			<blockquote class="centered">"He unfolded the parchment and hastily added a postscript." => <span class="hash-state">e56e2b287d08c2e274df79c58f1e0b66c1131de0ed2dfdc24144ce72829e2f19</span></blockquote>
 			
 			<p>Using SHA-256, we could assign a unique name to every single piece of text ever written. The names don't roll off the tongue quite as easily, but that's a sacrifice we'll have to accept.</p>
 
@@ -58,7 +58,7 @@
 
 			<details>
 				<summary>The hashes are longer than the text itself...</summary>
-				<p>Just like hashing isn't limited to text, it also isn't limited by length. The entire <a href="https://gist.github.com/Niximacco/6ae63abd1834485811200daefc319b40" target="_blank" rel="noopener noreferrer">Bee Movie script</a> hashes to 27052339536a08543f16b5fa0deb4ce554a70b697b27ee0143302d7e6ec4fe2f.</p>
+				<p>Just like hashing isn't limited to text, it also isn't limited by length. The entire <a href="https://gist.github.com/Niximacco/6ae63abd1834485811200daefc319b40" target="_blank" rel="noopener noreferrer">Bee Movie script</a> hashes to <span class="hash-state">27052339536a08543f16b5fa0deb4ce554a70b697b27ee0143302d7e6ec4fe2f</span>.</p>
 			</details>
 
 		<h2>Why is this useful?</h2>
@@ -155,7 +155,7 @@
 
 			<blockquote class="centered">"Hello my dear friend Bob. I am writing an urgent letter to request the shipment of 2 gerbils to my place of residence at once."</blockquote>
 
-			<blockquote class="centered">Hash: f292d76ba39099213d5d0736801f784b0f797a4e7044489b71b8d9f3d78c1342</blockquote>
+			<blockquote class="centered">Hash: <span class="hash-state">f292d76ba39099213d5d0736801f784b0f797a4e7044489b71b8d9f3d78c1342</span></blockquote>
 
 			<p>You know all about Alice and Bob's little secret hashing setup, though sadly you've never been able to actually find the secret. But now you don't need to! You have a hash, and can guess at the length of the secret to create another valid hash for an extended message! For simplicity, let us assume that you send Bob messages repeatedly until you correctly guess the secret length of 19:</p>
 

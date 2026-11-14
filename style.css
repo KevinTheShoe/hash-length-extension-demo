@@ -88,7 +88,7 @@ textarea {
 
 .hash-state {
 	font-family: monospace;
-	font-size: 18px;
+	color: #aa00ff;
 	width: 32ch;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
