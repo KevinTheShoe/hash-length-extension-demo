@@ -107,9 +107,11 @@
 
 			<p>Now that our blocks are nice and square, we're ready to feed them to the real belly of the beast: SHA-256's compression function. This is what does most of the work destroying information about the data and turning what we have into a nice hash. We won't get too deep into the weeds about how it actually works: just think of it as a function that takes a 32-byte "state" along with a 64-byte block of data, and outputs another state.</p>
 			
+			<img class="centered" src="images/compression.svg">
+			
 			<p>That output state is then fed back into the compression function along with a new block of data, and this process repeats until all blocks have been consumed.</p>
 			
-			<p>What about the first function in the chain? Who will feed it the state it needs? Worry not, as it recieves a special, universal default state called the "initialization vector" (IV).</p>
+			<p>What about the first function in the chain? Who will feed it the state it needs? Worry not: it recieves a special, universal default state called the "initialization vector" (IV).</p>
 
 			<p>And that's it! We run down the chain, and the final compression function's output state is our final SHA-256 hash!</p>
 
@@ -124,6 +126,8 @@
 			<textarea id="sha-demo-extension-input" class="centered">New, extended text.</textarea>
 
 			<div id="sha-demo-extension" class="centered two-col"></div>
+
+			<p>Now we have the hash for a new piece of text, one that looks like this:</p>
 
 			<p>Of course, a side effect of including the original padding + length bytes as part of the data is that there will be a bit of garbage scattered before our extended message. To a human reciever, this might give some indication that something was tampered with. In practice, though, the reciever could be a web server, an electronic service, or otherwise oblivious to the suspicious-looking characters.</p>
 			
