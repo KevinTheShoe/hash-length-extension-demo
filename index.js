@@ -18,14 +18,16 @@ function shaDemoUpdate() {
 
 	document.getElementById('sha-demo-full').replaceChildren(...createShaFullDemoEls(blocks, bytes.length));
 
-	document.getElementById('sha-demo-result').innerHTML = `"${new TextDecoder().decode(bytes)}" => <span class="hash-state">${sha256.stateToHex(sha256.compressBlock(sha256.joinBytes(blocks)))}</span>`;
+	document.getElementById('sha-demo-result-text').textContent = new TextDecoder().decode(bytes);
+	document.getElementById('sha-demo-result-hash').textContent = sha256.stateToHex(sha256.compressBlock(sha256.joinBytes(blocks)));
 
 	const extendedBytes = sha256.joinBytes(blocks, sha256.strToBytes(shaDemoExtensionInput.value));
 	const extendedBlocks = sha256.splitBytes(sha256.padBytes(extendedBytes));
 
 	document.getElementById('sha-demo-extension').replaceChildren(...createShaFullDemoEls(extendedBlocks, extendedBytes.length));
 
-	document.getElementById('sha-demo-extension-result').innerHTML = `"${new TextDecoder().decode(extendedBytes)}" => <span class="hash-state">${sha256.stateToHex(sha256.compressBlock(sha256.joinBytes(extendedBlocks)))}</span>`;
+	document.getElementById('sha-demo-extension-result-text').textContent = new TextDecoder().decode(extendedBytes);
+	document.getElementById('sha-demo-extension-result-hash').textContent = sha256.stateToHex(sha256.compressBlock(sha256.joinBytes(extendedBlocks)));
 }
 
 
@@ -40,7 +42,7 @@ function extensionDemoUpdate() {
 
 	document.getElementById('extension-demo-result-text').textContent = `"Hello my dear friend Bob. I am writing an urgent letter to request the shipment of 2 gerbils to my place of residence at once.${new TextDecoder().decode(new Uint8Array([0x80,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x04,0x88]))}${extensionDemoInput.value}"`;
 
-	document.getElementById('extension-demo-result-hash').innerHTML = `Hash: <span class="hash-state">${sha256.stateToHex(sha256.compressBlock(sha256.joinBytes(blocks), sha256.hexToState('f292d76ba39099213d5d0736801f784b0f797a4e7044489b71b8d9f3d78c1342')))}</span>`;
+	document.getElementById('extension-demo-result-hash').textContent = sha256.stateToHex(sha256.compressBlock(sha256.joinBytes(blocks), sha256.hexToState('f292d76ba39099213d5d0736801f784b0f797a4e7044489b71b8d9f3d78c1342')));
 }
 
 

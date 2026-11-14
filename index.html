@@ -127,7 +127,7 @@
 
 			<p>The final compression function's output state is our final SHA-256 hash!</p>
 
-			<blockquote id="sha-demo-result" class="centered"></blockquote>
+			<blockquote class="centered"><span id="sha-demo-result-text"></span> => <span id="sha-demo-result-hash" class="hash-state"></span></blockquote>
 
 		<h2>What's wrong?</h2>
 
@@ -141,7 +141,7 @@
 
 			<p>Now we have the hash for a new piece of text, one that looks like this:</p>
 
-			<blockquote id="sha-demo-extension-result" class="centered"></blockquote>
+			<blockquote class="centered"><span id="sha-demo-extension-result-text"></span> => <span id="sha-demo-extension-result-hash" class="hash-state"></span></blockquote>
 
 			<p>Of course, a side effect of including the original padding + length bytes as part of the data is that there will be a bit of garbage scattered before our extended message. To a human reciever, this might give some indication that something was tampered with. In practice, though, the reciever could be a web server, an electronic service, or otherwise oblivious to the suspicious-looking characters.</p>
 			
@@ -167,7 +167,7 @@
 
 			<blockquote id="extension-demo-result-text" class="centered"></blockquote>
 
-			<blockquote id="extension-demo-result-hash" class="centered"></blockquote>
+			<blockquote class="centered">Hash: <span id="extension-demo-result-hash" class="hash-state"></span></blockquote>
 
 			<p>Bob will recieve this message, prepend the secret, and find it to be a valid hash! Alice shall soon be met with a most nasty surprise.</p>
 
