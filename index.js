@@ -1,88 +1,54 @@
 import * as sha256 from './sha256.js';
 
 
-document.addEventListener('DOMContentLoaded', () => {
-	for (let e of document.getElementsByTagName('textarea')) {
-		e.addEventListener('input', onInputChange);
-		onInputChange({ target: e });
-	}
-});
+const shaDemoInput = document.getElementById('sha-demo-input');
+shaDemoInput.addEventListener('input', shaDemoUpdate);
+shaDemoUpdate();
 
+function shaDemoUpdate() {
+	const bytes = sha256.strToBytes(shaDemoInput.value);
 
-function onInputChange(event) {
-	for (let e of document.getElementsByClassName(event.target.dataset.target)) {
-		if (e.classList.contains('demo-split')) {
-			e.replaceChildren(...generateBlockElements(event.target.value, false));
-		}
-		else if (e.classList.contains('demo-padded')) {
-			e.replaceChildren(...generateBlockElements(event.target.value, true));
-		}
-		else if (e.classList.contains('demo-full')) {
-			e.replaceChildren();
+	document.getElementById('sha-demo-split').replaceChildren(...sha256.splitBytes(bytes).map((block, idx) => createBlock(block, idx * 64, bytes.length)));
 
-			let bytes = sha256.strToBytes(event.target.value);
-			const blocks = sha256.splitBytes(sha256.padBytes(bytes));
-			
-			let i = 0;
-			let state = sha256.DEFAULT_IV;
-			for (const block of blocks) {
-				// append blank cell and state
-				e.append(el('div'), el('span', 'hash-state', null, sha256.stateToHex(state)));
+	const blocks = sha256.splitBytes(sha256.padBytes(bytes));
 
-				// update state for next block
-				state = sha256.compressBlock(block, state);
-				
-				const blockElement = el('div', 'hash-block');
-				for (const byte of block) {
-					if (i < bytes.length) {
-						if (byte >= 32 && byte <= 126) blockElement.append(el('span', 'byte hash-data', null, String.fromCharCode(byte)));
-						else blockElement.append(el('span', 'byte hash-data hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
-					}
-					else blockElement.append(el('span', 'byte hash-padding hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
-					i++;
-				}
+	document.getElementById('sha-demo-padded').replaceChildren(...blocks.map((block, idx) => createBlock(block, idx * 64, bytes.length)));
 
-				// then block element and compression function image
-				const compressionImg = el('img');
-				compressionImg.src = 'images/compression.svg';
-				e.append(blockElement, compressionImg);
-			}
-			
-			// final blank cell and state
-			e.append(el('div'), el('span', 'hash-state', null, sha256.stateToHex(state)));
-		}
-	}
+	let state = sha256.DEFAULT_IV;
+	const nodes = [el('div'), el('span', 'hash-state', sha256.stateToHex(state))];
+
+	blocks.forEach((block, idx) => {
+		state = sha256.compressBlock(block, state);
+		nodes.push(
+			createBlock(block, idx * 64, bytes.length),
+			el('img', null, null, { src: 'images/compression.svg' }),
+			el('div'),
+			el('span', 'hash-state', sha256.stateToHex(state))
+		);
+	});
+
+	document.getElementById('sha-demo-full').replaceChildren(...nodes);
 }
 
 
-function el(tag, cls, id, text) {
-	const node = document.createElement(tag);
+function createBlock(block, offset, dataLen) {
+	const blockEl = el('div', 'hash-block');
+
+	block.forEach((byte, i) => {
+		const isData = offset + i < dataLen;
+		const isPrintable = isData && byte >= 32 && byte <= 126;
+		const text = isPrintable ? String.fromCharCode(byte) : byte.toString(16).padStart(2, '0').toUpperCase();
+		const cls = `byte ${isData ? 'hash-data' : 'hash-padding'}${isPrintable ? '' : ' hex'}`;
+
+		blockEl.append(el('span', cls, text));
+	});
+
+	return blockEl;
+}
+
+function el(tag, cls, text, attrs = {}) {
+	const node = Object.assign(document.createElement(tag), attrs);
 	if (cls) node.className = cls;
-	if (id) node.id = cls;
 	if (text !== undefined) node.textContent = text;
 	return node;
-}
-
-
-function generateBlockElements(text, padded) {
-	let bytes = sha256.strToBytes(text);
-	const blocks = sha256.splitBytes(padded ? sha256.padBytes(bytes) : bytes);
-
-	const blockElements = [];
-
-	let i = 0;
-	for (const block of blocks) {
-		const blockElement = el('div', 'hash-block');
-		for (const byte of block) {
-			if (i < bytes.length) {
-				if (byte >= 32 && byte <= 126) blockElement.append(el('span', 'byte hash-data', null, String.fromCharCode(byte)));
-				else blockElement.append(el('span', 'byte hash-data hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
-			}
-			else blockElement.append(el('span', 'byte hash-padding hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
-			i++;
-		}
-		blockElements.push(blockElement);
-	}
-
-	return blockElements;
 }

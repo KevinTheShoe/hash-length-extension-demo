@@ -93,17 +93,17 @@
 
 			<p>First, let us choose a large message we want to hash.</p>
 
-			<textarea class="centered" data-target="demo-1">Dumbledore smiled at Harry, but Karkaroff and Madame Maxime didn't look at all pleased to see him.</textarea>
+			<textarea id="sha-demo-input" class="centered">Dumbledore smiled at Harry, but Karkaroff and Madame Maxime didn't look at all pleased to see him.</textarea>
 
 			<p>We will split that message into 64-byte blocks. Each letter is one byte.</p>
 
-			<div class="demo-1 demo-split col centered"></div>
+			<div id="sha-demo-split" class="centered col"></div>
 
 			<p>Notice that in the example provided, there are not enough letters in the second block to fill it out fully! This is no good, because SHA-256's internal functions operate only on 64-byte blocks. What we must do in this situation is add "padding" bytes (meaningless junk bytes) in order to fill out the rest of the block. At the very end of the block, we also include 8 bytes that represent how long the original data was.</p>
 
 			<p>Note: these padding and length bytes cannot be represented as letters. We'll denote them using hexidecimal, like this: <span class='byte hex hash-padding'>D3</span></p>
 
-			<div class="demo-1 demo-padded col centered"></div>
+			<div id="sha-demo-padded" class="centered col"></div>
 
 			<p>Now that our blocks are nice and square, we're ready to feed them to the real belly of the beast: SHA-256's compression function. This is what does most of the work destroying information about the data and turning what we have into a nice hash. We won't get too deep into the weeds about how it actually works: just think of it as a function that takes a 32-byte "state" along with a 64-byte block of data, and outputs another state.</p>
 			
@@ -113,7 +113,7 @@
 
 			<p>And that's it! We run down the chain, and the final compression function's output state is our final SHA-256 hash!</p>
 
-			<div class="demo-1 demo-full two-col centered"></div>
+			<div id="sha-demo-full" class="centered two-col"></div>
 
 		<h2>What's wrong?</h2>
 
@@ -121,7 +121,9 @@
 
 			<p>As it turns out, we can! If we simply pretend that the message padding and length bytes were part of the data, we can take the final hash and keep running it through the hash function with new data!</p>
 
-			<textarea id="demo-1-extension-input" class="centered">New, extended text!</textarea>
+			<textarea id="sha-demo-extension-input" class="centered">New, extended text.</textarea>
+
+			<div id="sha-demo-extension" class="centered two-col"></div>
 
 			<p>Of course, a side effect of including the original padding + length bytes as part of the data is that there will be a bit of garbage scattered before our extended message. To a human reciever, this might give some indication that something was tampered with. In practice, though, the reciever could be a web server, an electronic service, or otherwise oblivious to the suspicious-looking characters.</p>
 			
