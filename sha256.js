@@ -4,7 +4,7 @@ import { sha256 } from './noble/sha2.js';
 export const strToBytes = (str) => new TextEncoder().encode(str);
 
 
-export function padBytes(bytes) {
+export function padBytes(bytes, extraLen = 0) {
 	const totalBytes = Math.ceil((bytes.length + 9) / 64) * 64;
 	const padded = new Uint8Array(totalBytes);
 
@@ -15,7 +15,7 @@ export function padBytes(bytes) {
 	padded[bytes.length] = 0x80;
 
 	// data bit length as a 64-bit big-endian integer in last 8 bytes
-	new DataView(padded.buffer).setBigUint64(totalBytes - 8, BigInt(bytes.length * 8), false);
+	new DataView(padded.buffer).setBigUint64(totalBytes - 8, BigInt((bytes.length + extraLen) * 8), false);
 
 	return padded;
 }
@@ -44,3 +44,5 @@ export function compressBlock(block, state = DEFAULT_IV) {
 
 
 export const stateToHex = (state) => state.map(n => (n >>> 0).toString(16).padStart(8, '0')).join('');
+
+export const hexToState = (hex) => (hex.match(/.{1,8}/g) || []).map(chunk => parseInt(chunk, 16) >>> 0);

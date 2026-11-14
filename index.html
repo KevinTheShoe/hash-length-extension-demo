@@ -139,13 +139,23 @@
 			
 			<p>Similarly, our new blocks will have to be padded as usual, including with correct length bytes. This might trip us up if we don't know the length of the original message. However, in most situations, it isn't very hard or infeasible to guess.</p>
 
-			<p>The implication of this is that even if we only know a message's length and hash, we can still generate the hash for a longer message consisting of the original message + some chosen data. We don't even need to know anything else about the original message!</p>
+			<p>The implication of this is that even if we only know a message's length and hash, we can still generate the hash for a longer message consisting of the original message + padding + some chosen data. We don't even need to know anything else about the original message!</p>
 
-		<h2>Try it yourself</h2>
+		<h2>Impact</h2>
 
-			
+			<p>Let's revisit our earlier example scenario. Let's say you're Eve, and you've managed to intercept a message from Alice to Bob that looks like this:</p>
 
-		<h2>Remediations</h2>
+			<blockquote class="centered">"Hello my dear friend Bob. I am writing an urgent letter to request the shipment of 2 gerbils to my place of residence at once."</blockquote>
+
+			<blockquote class="centered">Hash: f292d76ba39099213d5d0736801f784b0f797a4e7044489b71b8d9f3d78c1342</blockquote>
+
+			<p>You know all about Alice and Bob's little secret hashing setup, though sadly you've never been able to actually find the secret. But now you don't need to! You have a hash, and can guess at the length of the secret to create another valid hash for an extended message! For simplicity, let us assume that Eve sends Bob messages repeatedly until she correctly guesses the secret length of 19:</p>
+
+			<textarea id="extension-demo-input" class="centered">P.S. also include a jar of 300 spiders.</textarea>
+
+			<div id="extension-demo" class="centered two-col"></div>
+
+			<blockquote id="extension-demo-result" class="centered"></blockquote>
 
 		<script type="module" src="index.js"></script>
 	</body>

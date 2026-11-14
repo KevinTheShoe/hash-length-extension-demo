@@ -29,8 +29,19 @@ function shaDemoUpdate() {
 }
 
 
-function createShaFullDemoEls(blocks, dataLen) {
-	let state = sha256.DEFAULT_IV;
+const extensionDemoInput = document.getElementById('extension-demo-input');
+extensionDemoInput.addEventListener('input', extensionDemoUpdate);
+extensionDemoUpdate();
+
+function extensionDemoUpdate() {
+	const bytes = sha256.strToBytes(extensionDemoInput.value);
+	const blocks = sha256.splitBytes(sha256.padBytes(bytes, 145));
+	document.getElementById('extension-demo').replaceChildren(...createShaFullDemoEls(blocks, bytes.length, sha256.hexToState('f292d76ba39099213d5d0736801f784b0f797a4e7044489b71b8d9f3d78c1342')));
+}
+
+
+function createShaFullDemoEls(blocks, dataLen, startingState = sha256.DEFAULT_IV) {
+	let state = startingState;
 	const nodes = [el('div'), el('span', 'hash-state', sha256.stateToHex(state))];
 
 	blocks.forEach((block, idx) => {
