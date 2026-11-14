@@ -11,7 +11,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function onInputChange(event) {
 	for (let e of document.getElementsByClassName(event.target.dataset.target)) {
-		e.replaceChildren(...generateBlockElements(event.target.value, e.classList.contains('padded')));
+		if (e.classList.contains('demo-split')) {
+			e.replaceChildren(...generateBlockElements(event.target.value, false));
+		}
+		else if (e.classList.contains('demo-padded')) {
+			e.replaceChildren(...generateBlockElements(event.target.value, true));
+		}
+		else if (e.classList.contains('demo-full')) {
+			let bytes = sha256.strToBytes(event.target.value);
+			const blocks = sha256.splitBytes(sha256.padBytes(bytes));
+			
+			let i = 0;
+			let state = sha256.DEFAULT_IV;
+			for (const block of blocks) {
+				// append blank cell and state
+				e.append(el('div'), el('span', 'hash-state', null, sha256.stateToHex(state)));
+
+				// update state for next block
+				state = sha256.compressBlock(block, state);
+				
+				const blockElement = el('div', 'hash-block');
+				for (const byte of block) {
+					if (i < bytes.length) {
+						if (byte >= 32 && byte <= 126) blockElement.append(el('span', 'byte hash-data', null, String.fromCharCode(byte)));
+						else blockElement.append(el('span', 'byte hash-data hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
+					}
+					else blockElement.append(el('span', 'byte hash-padding hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
+					i++;
+				}
+
+				// then block element and compression function image
+				e.append(blockElement, el('img'));
+			}
+			
+			// final blank cell and state
+			e.append(el('div'), el('span', 'hash-state', null, sha256.stateToHex(state)));
+		}
 	}
 }
 
@@ -33,13 +68,13 @@ function generateBlockElements(text, padded) {
 
 	let i = 0;
 	for (const block of blocks) {
-		const blockElement = el('div', 'block');
+		const blockElement = el('div', 'hash-block');
 		for (const byte of block) {
 			if (i < bytes.length) {
-				if (byte >= 32 && byte <= 126) blockElement.append(el('span', 'byte data', null, String.fromCharCode(byte)));
-				else blockElement.append(el('span', 'byte data hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
+				if (byte >= 32 && byte <= 126) blockElement.append(el('span', 'byte hash-data', null, String.fromCharCode(byte)));
+				else blockElement.append(el('span', 'byte hash-data hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
 			}
-			else blockElement.append(el('span', 'byte padding hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
+			else blockElement.append(el('span', 'byte hash-padding hex', null, byte.toString(16).padStart(2, '0').toUpperCase()));
 			i++;
 		}
 		blockElements.push(blockElement);

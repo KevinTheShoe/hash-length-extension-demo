@@ -93,17 +93,17 @@
 
 			<p>First, let us choose a large message we want to hash.</p>
 
-			<textarea data-target="input-1">Dumbledore smiled at Harry, but Karkaroff and Madame Maxime didn't look at all pleased to see him.</textarea>
+			<textarea data-target="demo-1">Dumbledore smiled at Harry, but Karkaroff and Madame Maxime didn't look at all pleased to see him.</textarea>
 
 			<p>We will split that message into 64-byte blocks. Each letter is one byte.</p>
 
-			<div class="input-1 blocks"></div>
+			<div class="demo-1 demo-split col"></div>
 
 			<p>Notice that in the example provided, there are not enough letters in the second block to fill it out fully! This is no good, because SHA-256's internal functions operate only on 64-byte blocks. What we must do in this situation is add "padding" bytes (meaningless junk bytes) in order to fill out the rest of the block. At the very end of the block, we also include 8 bytes that represent how long the original data was.</p>
 
-			<p>Note: these padding and length bytes cannot be represented as letters. We'll denote them using hexidecimal, like this: <span class='byte hex padding'>D3</span></p>
+			<p>Note: these padding and length bytes cannot be represented as letters. We'll denote them using hexidecimal, like this: <span class='byte hex hash-padding'>D3</span></p>
 
-			<div class="input-1 blocks padded"></div>
+			<div class="demo-1 demo-padded col"></div>
 
 			<p>Now that our blocks are nice and square, we're ready to feed them to the real belly of the beast: SHA-256's compression function. This is what does most of the work destroying information about the data and turning what we have into a nice hash. We won't get too deep into the weeds about how it actually works: just think of it as a function that takes a 32-byte "state" along with a 64-byte block of data, and outputs another state.</p>
 			
@@ -112,6 +112,8 @@
 			<p>What about the first function in the chain? Who will feed it the state it needs? Worry not, as it recieves a special, universal default state called the "initialization vector" (IV).</p>
 
 			<p>And that's it! We run down the chain, and the final compression function's output state is simply our final SHA-256 hash!</p>
+
+			<div class="demo-1 demo-full two-col"></div>
 
 		<h2>What's wrong?</h2>
 

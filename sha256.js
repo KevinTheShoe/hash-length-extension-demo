@@ -35,9 +35,9 @@ export const DEFAULT_IV = [
 
 export function compressBlock(block, state = DEFAULT_IV) {
 	const h = sha256.create();
-	[h.h0, h.h1, h.h2, h.h3, h.h4, h.h5, h.h6, h.h7] = state;
+	[h.A, h.B, h.C, h.D, h.E, h.F, h.G, h.H] = state;
 	h.update(block);
-	return [h.h0, h.h1, h.h2, h.h3, h.h4, h.h5, h.h6, h.h7];
+	return [h.A, h.B, h.C, h.D, h.E, h.F, h.G, h.H];
 }
 
 

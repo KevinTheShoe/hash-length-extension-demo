@@ -36,7 +36,7 @@ textarea {
 }
 
 
-.blocks {
+.col {
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
@@ -44,13 +44,22 @@ textarea {
 	align-items: center;
 }
 
-.block {
+.two-col {
 	display: grid;
-	grid-template-columns: repeat(8, max-content);
-	grid-auto-rows: max-content; 
-	gap: 4px;
+	grid-template-columns: repeat(2, max-content);
+	grid-auto-rows: max-content;
+	gap: 40px;
+	padding: 40px;
+	align-items: center;
 }
 
+
+.hash-block {
+	display: grid;
+	grid-template-columns: repeat(8, max-content);
+	grid-auto-rows: max-content;
+	gap: 4px;
+}
 
 .byte {
 	font-family: monospace;
@@ -69,14 +78,22 @@ textarea {
 	font-size: 16px;
 }
 
-.data {
+.hash-data {
 	background-color: #aaffaa;
 	border: 1px solid #008000;
 	color: #008000;
 }
 
-.padding {
+.hash-padding {
 	background-color: #fff1aa;
 	border: 1px solid #805500;
 	color: #805500;
+}
+
+.hash-state {
+	font-family: monospace;
+	font-size: 18px;
+	width: 32ch;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
