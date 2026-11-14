@@ -18,6 +18,8 @@ function onInputChange(event) {
 			e.replaceChildren(...generateBlockElements(event.target.value, true));
 		}
 		else if (e.classList.contains('demo-full')) {
+			e.replaceChildren();
+
 			let bytes = sha256.strToBytes(event.target.value);
 			const blocks = sha256.splitBytes(sha256.padBytes(bytes));
 			
