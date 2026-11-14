@@ -23,6 +23,8 @@ blockquote {
 textarea {
 	font-family: monospace;
 	font-size: 18px;
+	field-sizing: content;
+	padding: 10px;
 }
 
 .centered {
