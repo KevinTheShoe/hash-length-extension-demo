@@ -120,12 +120,18 @@
 			<p>Wait a minute. If the final hash is just the final state in the chain, can't we just... continue where we left off?</p>
 
 			<p>As it turns out, we can! If we simply pretend that the message padding and length bytes were part of the data, we can take the final hash and keep running it through the hash function with new data!</p>
-			
-			<p>Our new blocks will have to be padded as usual, including with correct length bytes, which might trip us up if we don't know the length of the original message. However, in most situations, it isn't very hard or infeasible to guess.</p>
 
-			<h3>Result</h3>
+			<textarea id="demo-1-extension-input" class="centered">New, extended text!</textarea>
+
+			<p>Of course, a side effect of including the original padding + length bytes as part of the data is that there will be a bit of garbage scattered before our extended message. To a human reciever, this might give some indication that something was tampered with. In practice, though, the reciever could be a web server, an electronic service, or otherwise oblivious to the suspicious-looking characters.</p>
+			
+			<p>Similarly, our new blocks will have to be padded as usual, including with correct length bytes. This might trip us up if we don't know the length of the original message. However, in most situations, it isn't very hard or infeasible to guess.</p>
+
+			<p>The implication of this is that even if we only know a message's length and hash, we can still generate the hash for a longer message consisting of the original message + some chosen data. We don't even need to know anything else about the original message!</p>
 
 		<h2>Try it yourself</h2>
+
+			
 
 		<h2>Remediations</h2>
 
